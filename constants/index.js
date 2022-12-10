@@ -1,66 +1,43 @@
-export const WHITELIST_CONTRACT_ADDRESS = " 0xb061B381bB53D983d22bB4CC155157D475B49cbf";
+export const WHITELIST_CONTRACT_ADDRESS = "0x657cE61209B409bA5B946A2436Fbe0eC3147071A";
 export const abi =  [
-    {
-      "inputs": [
-        {
-          "internalType": "uint8",
-          "name": "_maxWhitelistedAddresses",
-          "type": "uint8"
-        }
-      ],
-      "stateMutability": "nonpayable",
-      "type": "constructor"
-    },
-    {
-      "inputs": [],
-      "name": "addAddressToWhitelist",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "maxWhitelistedAddresses",
-      "outputs": [
-        {
-          "internalType": "uint8",
-          "name": "",
-          "type": "uint8"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [],
-      "name": "numAddressesWhitelisted",
-      "outputs": [
-        {
-          "internalType": "uint8",
-          "name": "",
-          "type": "uint8"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "internalType": "address",
-          "name": "",
-          "type": "address"
-        }
-      ],
-      "name": "whitelistedAddresses",
-      "outputs": [
-        {
-          "internalType": "bool",
-          "name": "",
-          "type": "bool"
-        }
-      ],
-      "stateMutability": "view",
-      "type": "function"
-    }
-  ];
+  {
+    "type": "constructor",
+    "payable": false,
+    "inputs": [{ "type": "uint8", "name": "_maxWhitelistedAddresses" }]
+  },
+  {
+    "type": "function",
+    "name": "addAddressToWhitelist",
+    "constant": false,
+    "payable": false,
+    "inputs": [],
+    "outputs": []
+  },
+  {
+    "type": "function",
+    "name": "maxWhitelistedAddresses",
+    "constant": true,
+    "stateMutability": "view",
+    "payable": false,
+    "inputs": [],
+    "outputs": [{ "type": "uint8" }]
+  },
+  {
+    "type": "function",
+    "name": "numAddressesWhitelisted",
+    "constant": true,
+    "stateMutability": "view",
+    "payable": false,
+    "inputs": [],
+    "outputs": [{ "type": "uint8" }]
+  },
+  {
+    "type": "function",
+    "name": "whitelistedAddresses",
+    "constant": true,
+    "stateMutability": "view",
+    "payable": false,
+    "inputs": [{ "type": "address" }],
+    "outputs": [{ "type": "bool" }]
+  }
+]
